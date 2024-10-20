@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
 }
@@ -89,7 +90,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("/workspaces/METORSTARPLZ/mentor/src/app/principal/principal.component.css");
+    ,url("https://opendigital.es/wp-content/uploads/2020/05/benefit.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -144,7 +145,7 @@ header a:hover{
         rgba(7, 226, 44, 0.5),
         rgba(145, 67, 67, 0.5)
     )
-    ,url("/workspaces/METORSTARPLZ/mentor/src/app/principal/principal.component.css");
+    ,url("https://opendigital.es/wp-content/uploads/2020/05/benefit.jpg");
 
 }
 
@@ -154,7 +155,7 @@ header a:hover{
         rgba(83, 224, 64, 0.5),
         rgba(100, 177, 89, 0.5)
     )
-    ,url("/workspaces/METORSTARPLZ/mentor/src/app/principal/principal.component.css");
+    ,url("https://opendigital.es/wp-content/uploads/2020/05/benefit.jpg");
 }
 
 .carta:nth-child(3){
@@ -163,7 +164,7 @@ header a:hover{
         rgba(108, 146, 90, 0.5),
         rgba(127, 165, 117, 0.5)
     )
-    ,url("/workspaces/METORSTARPLZ/mentor/src/app/principal/principal.component.css");
+    ,url("https://opendigital.es/wp-content/uploads/2020/05/benefit.jpg");
 
 }
 
@@ -236,7 +237,7 @@ footer .container{
     }
 
     #somos-proya .img-container{
-        background-image: url("/workspaces/METORSTARPLZ/mentor/src/app/principal/principal.component.css");
+        background-image: url("https://arquitecturapanamericana.com/wp-content/gallery/AULARIO-EN-EL-CAMPUS-DE-LA-UNIVERSIDAD-RICARDO-PALMA%2C-SURCO/AULARIO-EN-EL-CAMPUS-DE-LA-UNIVERSIDAD-R.-P.-006.jpg");
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -276,7 +277,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("/workspaces/METORSTARPLZ/mentor/src/app/principal/principal.component.css");
+        ,url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTkNxr2DXCRZScaqgcm8KI7QVWtz4meNHo0A&s");
 
     }
 
@@ -295,15 +296,16 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("/workspaces/METORSTARPLZ/mentor/src/app/principal/principal.component.css");
+        ,url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToIazOv6qzfTU69bW9FcXzHEJQFn6dS5sBFQ&s");
 
     }
 
     #caracteristicas{
-        background-image: url("/workspaces/METORSTARPLZ/mentor/src/app/principal/principal.component.css");
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZG3Tao3JqpB2zhj4G--wIxrvGj4ppcTqoag&s");
         background-repeat: no-repeat;
-        background-size: 500px 400px;
+        background-size: 700px 400px;
         background-position: calc(100vw - 500px) 120px;
+        background-position: center center;
     }
 
     #caracteristicas .container{
