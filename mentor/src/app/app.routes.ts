@@ -1,10 +1,13 @@
-import { Routes } from '@angular/router';
+import { Routes } from '@angular/router';  // 'Routes' es solo un tipo, no un valor
 import { LoginComponent } from './login/login.component';
-import { PrincipalComponent } from './principal/principal.component';
 import { AdministradorComponent } from './administrador/administrador.component';
-export const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'principal', component: PrincipalComponent },
-  { path: 'admin', component: AdministradorComponent },
+import { PrincipalComponent } from './principal/principal.component';
+import { MentoresComponent } from './mentores/mentores.component';
 
+export const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'administrador', component: AdministradorComponent },
+  { path: 'principal', component: PrincipalComponent },
+  { path: 'mentores', component: MentoresComponent },
 ];

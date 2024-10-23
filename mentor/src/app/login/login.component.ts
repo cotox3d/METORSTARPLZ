@@ -26,7 +26,7 @@ export class LoginComponent {
     if (this.username === validUsername && this.password === validPassword) {
       this.errorMessage = null;
       alert('Login exitoso');
-      this.router.navigate(['/admin']);
+      this.router.navigate(['/administrador']);
     }
     else if (this.username === validMemberUsername && this.password === validMemberPassword) {
       this.errorMessage = null;
