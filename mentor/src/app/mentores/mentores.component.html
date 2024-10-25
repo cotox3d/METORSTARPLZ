@@ -1,1 +1,98 @@
-<p>mentores works!</p>
+<header>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encuesta de Perfil</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <div class="container">
+            <p class="logo">
+                <a (click)="goToMentores()">STAR URP</a>
+            </p>
+            <nav>
+                <a (click)="goToMentores()">Quienes Somos</a>
+                <a (click)="goToMentores()">Nuestros Programas</a>
+                <a (click)="goToMentores()">Características</a>
+            </nav>
+        </div>
+</header>
+<body>
+<div class="container">
+    <h2 class="text-2xl font-bold text-green-600 text-center mb-6">Mentores Registrados</h2>
+
+    <table class="min-w-full bg-white">
+        <thead>
+            <tr>
+                <th class="py-2">Función</th>
+                <th class="py-2">Personaje</th>
+                <th class="py-2">Nombre</th>
+                <th class="py-2">Carrera</th>
+                <th class="py-2">Ciclo</th>
+                <th class="py-2">Cumpleaños</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let encuesta of encuestas">
+                <td class="border px-4 py-2">{{ encuesta.funcion }}</td>
+                <td class="border px-4 py-2">{{ encuesta.personaje }}</td>
+                <td class="border px-4 py-2">{{ encuesta.nombre }}</td>
+                <td class="border px-4 py-2">{{ encuesta.carrera }}</td>
+                <td class="border px-4 py-2">{{ encuesta.ciclo }}</td>
+                <td class="border px-4 py-2">{{ encuesta.cumpleanos }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button class="btn btn-primary" (click)=" goToEncuestamentor()">UNIRTE</button>
+
+</body>
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+        <div class="logo-blanco">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8X4H6nNtyD6X5NThGHvSmydNFJnt2ptwZVQ&s"
+                alt="Logo STAR URP">
+        </div>
+
+        <p class="footer-links">
+            <a href="#somos-proya">Quienes Somos</a>
+            |
+            <a href="#nuestros-programas">Nuestros Programas</a>
+            |
+            <a href="#caracteristicas">Características</a>
+            |
+            <a href="#fa fa-phone">Contactos</a>
+        </p>
+    </div>
+    -----
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Av. Benavides 5440, Lima, Peru</span></p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+51 985 755 555</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:rsurp@urp.edu.pe">rsurp&#64;urp.edu.pe</a></p>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Sobre Nosotros</span>
+            El Programa de Mentoría apoya a los nuevos estudiantes en su transición universitaria, ayudándoles a
+            adaptarse al entorno académico, social y cultural.
+        </p>
+
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/urpalma/" aria-label="Facebook URP">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </div>
+        <p class="footer-company-name">2024 Programa de Mentoría URP. Todos los derechos reservados por COTOX3D</p>
+    </div>
+</footer>
