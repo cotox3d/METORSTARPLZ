@@ -29,4 +29,7 @@ export class MentoresComponent {
   goToEncuestamentor() {
     this.router.navigate(['/encuestamentor']);
   }
+  goToadminmentor() {
+    this.router.navigate(['/adminmentor']);
+  }
 }

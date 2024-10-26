@@ -1,30 +1,41 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';  // Importar FormsModule
+import { EncuestaService } from '../services/encuesta.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-administrador',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './administrador.component.html',
   styleUrl: './administrador.component.css'
 })
 export class AdministradorComponent  {
+  newNotifications = 0;
+  isDropdownOpen = false;
+  totalReuniones: number = 10; // Valor de ejemplo, puedes actualizar con datos reales
+  totalMentores: number = 15;
+  totalAlumnos: number = 100;
+  totalProfesores: number = 8;
 
-  stats = {
-    admin: 7,
-    teacher: 10,
-    student: 70,
-    representative: 70
-  };
-
-  history = [
-    { id: 1, role: 'Admin', name: 'Name', start: '7:00 AM', end: '7:17 AM', date: '07/07/2016' },
-    { id: 2, role: 'Teacher', name: 'Name', start: '7:00 AM', end: '7:17 AM', date: '07/07/2016' }
-  ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-    // Aquí puedes agregar lógica para cargar estadísticas o historial desde un API, etc.
+  constructor(private router: Router, private encuestaService: EncuestaService) { }
+  goToadminmentor() {
+    this.router.navigate(['/adminmentor']);
   }
 
+  toggleDropdown(event: Event) {
+    event.preventDefault();
+    this.isDropdownOpen = !this.isDropdownOpen; 
+  }
+  ngOnInit(): void {
+    this.loadStatistics();
+  }
+  loadStatistics() {
+    // Ejemplo de datos, reemplaza esto con datos reales de un servicio
+    this.totalReuniones = 10;
+    this.totalMentores = 15;
+    this.totalAlumnos = 100;
+    this.totalProfesores = 8;
+  }
 }
