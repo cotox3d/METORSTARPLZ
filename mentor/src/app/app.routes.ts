@@ -5,6 +5,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { MentoresComponent } from './mentores/mentores.component';
 import { EncuestamenotrComponent } from './encuestamenotr/encuestamenotr.component';
 import { AdminiMentoresComponent } from './admini-mentores/admini-mentores.component';
+import { InformativoComponent } from './informativo/informativo.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -12,5 +13,6 @@ export const routes: Routes = [
   { path: 'principal', component: PrincipalComponent },
   { path: 'mentores', component: MentoresComponent },
   { path: 'encuestamentor', component: EncuestamenotrComponent },
-  { path: 'adminmentor', component: AdminiMentoresComponent } 
+  { path: 'adminmentor', component: AdminiMentoresComponent }, 
+  { path: 'info',component:InformativoComponent}
 ];

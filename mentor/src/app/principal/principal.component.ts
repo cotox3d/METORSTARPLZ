@@ -11,9 +11,15 @@ import { Router } from '@angular/router';
 export class PrincipalComponent {
    constructor(private router: Router) { }  
 
-    goToMentores() {
-    this.router.navigate(['/mentores']);  
-    }
+  goToMentores() {this.router.navigate(['/mentores']);  }
+
+  info() {
+    this.router.navigate(['/info'])
+  }
+
+
+
+
   scrollToSection(section: string) {
     let targetPosition: number;
     let offset = -65; // Offset predeterminado para las secciones
@@ -38,6 +44,9 @@ export class PrincipalComponent {
         return; // Si no existe la sección, no hacer nada
       }
     }
+
+
+
 
     const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;

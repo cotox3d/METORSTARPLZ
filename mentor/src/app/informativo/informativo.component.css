@@ -1,0 +1,337 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2.7em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+/* Botón Estilos Generales */
+button {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgb(54, 134, 61);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(150, 175, 140);
+    transform: scale(1.05);
+}
+
+/* Container general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.color-acento {
+    color: rgb(131, 209, 157);
+}
+
+/* Header styles */
+header {
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(81, 199, 57);
+    font-size: 1.6em;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(175, 209, 169);
+}
+
+header a:hover {
+    color: rgb(161, 235, 183);
+}
+
+@media (min-width: 850px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+}
+
+/* Hero section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://opendigital.es/wp-content/uploads/2020/05/benefit.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+}
+
+#hero h1 {
+    color: white;
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#hero button {
+    font-size: 1.75em;
+    padding: 15px 40px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Somos Proya section */
+#somos-proya .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    text-align: left;
+}
+
+#somos-proya .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#somos-proya h2 span {
+    color: #0f8b38;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#somos-proya p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+#somos-proya .img-container {
+    background-image: url("https://arquitecturapanamericana.com/wp-content/gallery/AULARIO-EN-EL-CAMPUS-DE-LA-UNIVERSIDAD-RICARDO-PALMA%2C-SURCO/AULARIO-EN-EL-CAMPUS-DE-LA-UNIVERSIDAD-R.-P.-006.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    height: 500px;
+    width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Programa de Mentoría Styles */
+#programa-mentoria h2 {
+    font-size: 2.5em;
+    color: #228B22;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#programa-mentoria .contenido h3 {
+    font-size: 1.8em;
+    color: #0f8b38;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#programa-mentoria .contenido p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Fondo blanco para la sección de "Rol de los Mentores" */
+.mentores-bg {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fondo verde claro para la sección del mapa */
+.bg-green-light {
+    background-color: #e6f4e6;
+    padding: 40px 20px;
+}
+
+/* Map container styles */
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.clickable-area {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(0, 83, 32, 0.8);
+    /* Ajusta el color y la opacidad */
+    cursor: pointer;
+}
+
+.faculty-tooltip {
+    position: absolute;
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+    transform: translate(-50%, -100%);
+    pointer-events: none;
+}
+
+/* Footer Styles */
+.footer-distributed {
+    background-color: #1a492c;
+    color: #ffffff;
+    width: 100%;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.footer-center i {
+    font-size: 22px;
+    background-color: #2c5b86;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+
+.footer-center p,
+.footer-center a,
+.footer-company-about {
+    color: #ffffff;
+}
+
+.footer-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #3b5998;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    background-color: #1a355b;
+}
+
+.footer-company-name {
+    font-size: 14px;
+    color: #8f9296;
+    margin-top: 20px;
+}
+
+@media (max-width: 880px) {
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

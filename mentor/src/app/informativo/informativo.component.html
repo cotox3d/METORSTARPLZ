@@ -1,0 +1,109 @@
+<body class="bg-gradient-to-b from-green-100 to-white flex flex-col min-h-screen pt-24">
+<header>
+
+    <div class="container">
+        <p class="logo">
+            <a (click)="goToMentores()">STAR URP</a>
+        </p>
+        <nav>
+            <a (click)="goToMentores()">Quienes Somos</a>
+            <a (click)="goToMentores()">Nuestros Programas</a>
+            <a (click)="goToMentores()">Características</a>
+        </nav>
+    </div>
+</header>
+
+    <!-- Contenido Principal -->        <!-- Sección de Características del Programa -->
+<section id="programa-mentoria" class="container">
+    <h2>Programa de Mentoría para Ingresantes</h2>
+    <div class="contenido">
+        <h3>Objetivo del Programa</h3>
+        <p>
+            El programa ayuda a los nuevos estudiantes a adaptarse a la vida universitaria mediante acompañamiento y
+            talleres que fomentan el desarrollo personal y académico.
+        </p>
+
+        <!-- Sección con fondo blanco para el Rol de los Mentores -->
+        <div class="mentores-bg">
+            <h3>Rol de los Mentores</h3>
+            <p>
+                Los mentores, estudiantes avanzados de Ingeniería, guían y apoyan a los ingresantes, proporcionando
+                orientación y actuando como modelos a seguir.
+            </p>
+        </div>
+
+        <h3>Beneficios para los Ingresantes</h3>
+        <p>
+            Los ingresantes ganan confianza, establecen redes de contacto y desarrollan un sentido de comunidad,
+            reduciendo el estrés en el primer semestre.
+        </p>
+    </div>
+</section>
+
+<section id="mapa" class="bg-green-light text-center py-8">
+    <h3 class="text-2xl font-bold text-green-900 underline mb-4">MAPA DE LA UNIVERSIDAD RICARDO PALMA</h3>
+    <div class="map-container">
+        <img src="https://static.wixstatic.com/media/5d8aa1_08ea3d86566b4b2696df90796dae3ad2~mv2.png/v1/crop/x_680,y_210,w_4660,h_2490/fill/w_560,h_300,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/mapa%20croqui.png"
+            alt="Mapa 3D de la Universidad Ricardo Palma" class="map-image w-full h-auto">
+
+        <div class="clickable-area" style="top: 120px; left: 150px;" (mouseover)="showFacultyName('Facultad A', $event)"
+            (mouseleave)="hideFacultyName()"></div>
+       
+        <div *ngIf="facultyName" class="faculty-tooltip" [style.top.px]="tooltipY" [style.left.px]="tooltipX">
+            {{ facultyName }}
+        </div>
+    </div>
+</section>
+</body>
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+        <div class="logo-blanco">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8X4H6nNtyD6X5NThGHvSmydNFJnt2ptwZVQ&s"
+                alt="Logo STAR URP">
+        </div>
+
+        <p class="footer-links">
+            <a href="#somos-proya">Quienes Somos</a>
+            |
+            <a href="#nuestros-programas">Nuestros Programas</a>
+            |
+            <a href="#caracteristicas">Características</a>
+            |
+            <a href="#fa fa-phone">Contactos</a>
+        </p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Av. Benavides 5440, Lima, Peru</span></p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+51 985 755 555</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:rsurp@urp.edu.pe">rsurp&#64;urp.edu.pe</a></p>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Sobre Nosotros</span>
+            El Programa de Mentoría apoya a los nuevos estudiantes en su transición universitaria, ayudándoles a
+            adaptarse al entorno académico, social y cultural.
+        </p>
+
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/urpalma/" aria-label="Facebook URP">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </div>
+        <p class="footer-company-name">2024 Programa de Mentoría URP. Todos los derechos reservados por COTOX3D</p>
+    </div>
+</footer>
