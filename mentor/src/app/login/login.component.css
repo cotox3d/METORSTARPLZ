@@ -1,6 +1,6 @@
 /* Fondo del cuerpo */
 html, body {
-  background: linear-gradient(135deg, rgba(0, 128, 128, 0.85), rgba(0, 255, 255, 0.65));
+  background: linear-gradient(135deg, #006400, #98FB98);
   background-size: cover;
   font-family: 'Ubuntu', sans-serif;
   min-height: 100vh;
@@ -10,52 +10,66 @@ html, body {
   align-items: center;
 }
 
-/* Estilo del contenedor principal */
-.main {
-  width: 400px;
-  padding: 30px;
+/* Contenedor principal que contiene el formulario y la sección de bienvenida */
+.login-container {
+  display: flex;
+  width: 800px;
+  height: 500px;
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  position: relative;
+  border-radius: 20px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-/* Imagen de usuario en la parte superior */
-.avatar {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #003c4f;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+/* Sección del formulario de login */
+.login-form {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.avatar img {
-  width: 60%;
-  height: 60%;
+/* Imagen de usuario en la parte superior */
+.avatar {
+  background: #006400;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-/* Título de inicio de sesión */
+.avatar img {
+  width: 50%;
+  height: 50%;
+  filter: invert(1); /* Esta línea hace que el icono sea blanco */
+}
+
+/* Título principal del formulario */
 .sign {
-  color: #00796b;
+  color: #006400;
   font-weight: bold;
   font-size: 25px;
-  margin-bottom: 30px;
-  margin-top: 60px;
+  margin-bottom: 10px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Input group con íconos */
+/* Subtítulo del formulario */
+.sub-sign {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Grupo de entrada con íconos */
 .input-group {
   position: relative;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -64,7 +78,7 @@ html, body {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  color: #00796b;
+  color: #006400;
   font-size: 18px;
 }
 
@@ -72,7 +86,7 @@ html, body {
   width: 100%;
   padding: 12px 40px;
   margin-bottom: 10px;
-  border: 2px solid #00796b;
+  border: 2px solid #006400;
   border-radius: 25px;
   background-color: #f0f0f0;
   font-size: 16px;
@@ -91,9 +105,9 @@ html, body {
 
 /* Botón de inicio de sesión */
 .submit {
-  width: 80%;
+  width: 100%;
   padding: 12px 0;
-  background: linear-gradient(90deg, #00796b, #1de9b6);
+  background: linear-gradient(90deg, #006400, #7CFC00);
   color: #fff;
   border: none;
   border-radius: 30px;
@@ -107,12 +121,36 @@ html, body {
 
 /* Efecto hover en el botón */
 .submit:hover {
-  background: linear-gradient(90deg, #1de9b6, #00796b);
+  background: linear-gradient(90deg, #7CFC00, #006400);
   transform: translateY(-4px);
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Efecto de enfoque del botón */
-.submit:focus {
-  outline: 3px solid #1de9b6;
+/* Sección de bienvenida */
+.welcome-section {
+  flex: 1;
+  padding: 40px;
+  background: linear-gradient(135deg, #006400, #58f058);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: jus;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: fantasy;
+  
+}
+
+.welcome-section p {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 300px;
 }
