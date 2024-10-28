@@ -190,8 +190,9 @@ header a:hover {
     font-size: 2.5em;
     color: #228B22;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
+    margin-top: 30px; 
 }
 
 #programa-mentoria .contenido h3 {
@@ -216,6 +217,22 @@ header a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+}
+.objetivo-bg {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.beneficios-bg {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 /* Fondo verde claro para la sección del mapa */
@@ -335,3 +352,4 @@ header a:hover {
         text-align: center;
     }
 }
+
