@@ -195,6 +195,13 @@ header a:hover {
     margin-top: 30px; 
 }
 
+#programa-mentoria .contenido {
+    display: flex;                   /* Usar flexbox para alinear en fila */
+    justify-content: space-between;  /* Espaciar uniformemente */
+    gap: 20px;                       /* Espacio entre cada sección */
+    flex-wrap: wrap;                 /* Permitir que los elementos se envuelvan si no hay suficiente espacio */
+}
+
 #programa-mentoria .contenido h3 {
     font-size: 1.8em;
     color: #0f8b38;
@@ -217,14 +224,20 @@ header a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; 
+    flex: 1;                          /* Cada tarjeta ocupará un ancho igual */
+    min-width: 250px;                 /* Ancho mínimo para mantenerlas legibles */
+    max-width: 30%;                   /* Limitar el ancho máximo al 30% del contenedor */
+    margin-bottom: 20px;              /* Espacio en la parte inferior para cuando se envuelven */
 }
 .objetivo-bg {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    flex: 1;                          /* Cada tarjeta ocupará un ancho igual */
+    min-width: 250px;                 /* Ancho mínimo para mantenerlas legibles */
+    max-width: 30%;                   /* Limitar el ancho máximo al 30% del contenedor */
+    margin-bottom: 20px;              /* Espacio en la parte inferior para cuando se envuelven */
 }
 
 .beneficios-bg {
@@ -232,8 +245,21 @@ header a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    flex: 1;                          /* Cada tarjeta ocupará un ancho igual */
+    min-width: 250px;                 /* Ancho mínimo para mantenerlas legibles */
+    max-width: 30%;                   /* Limitar el ancho máximo al 30% del contenedor */
+    margin-bottom: 20px;              /* Espacio en la parte inferior para cuando se envuelven */
 }
+
+/* Imágenes en las tarjetas del Programa de Mentoría */
+.programa-img {
+    width: 100%;                      /* La imagen se ajustará al ancho del contenedor */
+    height: 150px;                    /* Altura fija para mantener el tamaño uniforme */
+    object-fit: cover;                /* Para que la imagen se ajuste sin deformarse */
+    border-radius: 10px 10px 0 0;     /* Bordes superiores redondeados, coherentes con la tarjeta */
+    margin-bottom: 15px;              /* Espacio entre la imagen y el contenido de la tarjeta */
+}
+
 
 /* Fondo verde claro para la sección del mapa */
 .bg-green-light {
