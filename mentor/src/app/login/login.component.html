@@ -1,11 +1,20 @@
 <body>
   <div class="main">
+    <div class="avatar">
+      <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="User Icon">
+    </div>
     <p class="sign" align="center">Iniciar Sesión</p>
     <form class="form1" (ngSubmit)="onLogin()">
-      <input class="un" type="text" align="center" placeholder="Usuario" [(ngModel)]="username" name="Codigo" required>
-      <input class="pass" type="password" align="center" placeholder="Contraseña" [(ngModel)]="password" name="password"
-        required>
-      <button class="submit" type="submit" align="center">Sign in</button>
+      <div class="input-group">
+        <span class="input-icon"><i class="fa fa-envelope"></i></span>
+        <input class="un" type="text" align="center" placeholder="Usuario" [(ngModel)]="username" name="Codigo" required>
+      </div>
+      <div class="input-group">
+        <span class="input-icon"><i class="fa fa-lock"></i></span>
+        <input class="pass" type="password" align="center" placeholder="Contraseña" [(ngModel)]="password" name="password" required>
+      </div>
+      <button class="submit" type="submit" align="center">LOGIN</button>
     </form>
   </div>
 </body>
+

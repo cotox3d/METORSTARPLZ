@@ -17,18 +17,20 @@
 </header>
 <body class="bg-gradient-to-b from-green-100 to-white flex items-center justify-center min-h-screen">
 
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md mt-24">
         <h2 class="text-2xl font-bold text-green-600 text-center mb-6">Ingresa tu perfil de suerte</h2>
-    
-        <form #encuestaForm="ngForm" (ngSubmit)="onSubmit(encuestaForm.value)" class="space-y-4">
+
+        <form id="encuestaForm" #encuestaForm="ngForm" (ngSubmit)="onSubmit(encuestaForm.value)" class="space-y-4">
             <!-- Función -->
             <div>
                 <label for="funcion" class="block text-green-700 font-semibold">Función</label>
-                <input type="text" id="funcion" name="funcion" ngModel
+                <select id="funcion" name="funcion" ngModel
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                     required>
+                    <option value="mentoriado" selected>Mentoriado</option>
+                </select>
             </div>
-    
+
             <!-- Personaje -->
             <div>
                 <label for="personaje" class="block text-green-700 font-semibold">Personaje</label>
@@ -36,7 +38,7 @@
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                     required>
             </div>
-    
+
             <!-- Nombre -->
             <div>
                 <label for="nombre" class="block text-green-700 font-semibold">Nombre</label>
@@ -44,23 +46,35 @@
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                     required>
             </div>
-    
+
             <!-- Carrera -->
             <div>
                 <label for="carrera" class="block text-green-700 font-semibold">Carrera</label>
-                <input type="text" id="carrera" name="carrera" ngModel
+                <select id="carrera" name="carrera" ngModel
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                     required>
+                    <option value="" disabled selected>Selecciona una carrera</option>
+                    <option value="ingenieria">Ingeniería</option>
+                    <option value="medicina">Medicina</option>
+                    <option value="arquitectura">Arquitectura</option>
+                    <option value="derecho">Derecho</option>
+                    <option value="administracion">Administración</option>
+                    <option value="ciencias">Ciencias</option>
+                    <option value="economia">Economía</option>
+                </select>
             </div>
-    
+
             <!-- Ciclo -->
             <div>
                 <label for="ciclo" class="block text-green-700 font-semibold">N° Ciclo</label>
-                <input type="number" id="ciclo" name="ciclo" ngModel min="1"
+                <select id="ciclo" name="ciclo" ngModel
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                     required>
+                    <option value="" disabled selected>Selecciona un ciclo</option>
+                    <option *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" [value]="i">{{ i }}</option>
+                </select>
             </div>
-    
+
             <!-- Cumpleaños -->
             <div>
                 <label for="cumpleanos" class="block text-green-700 font-semibold">Cumpleaños</label>
@@ -68,7 +82,7 @@
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                     required>
             </div>
-    
+
             <!-- Botón -->
             <button type="submit"
                 class="w-full bg-green-600 text-white font-semibold py-2 rounded-md hover:bg-green-700 transition duration-300">
@@ -76,10 +90,10 @@
             </button>
         </form>
     </div>
-
     <!-- JavaScript para manejar el formulario -->
     <script src="formilario.js"></script>
 </body>
+
 <footer class="footer-distributed">
 
     <div class="footer-left">

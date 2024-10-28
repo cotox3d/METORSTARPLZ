@@ -16,10 +16,9 @@ export class PrincipalComponent {
   info() {
     this.router.navigate(['/info'])
   }
-
-
-
-
+  goToLogin() {
+    this.router.navigate(['/login']);
+  }
   scrollToSection(section: string) {
     let targetPosition: number;
     let offset = -65; // Offset predeterminado para las secciones
