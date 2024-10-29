@@ -245,10 +245,10 @@ header a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;                          /* Cada tarjeta ocupará un ancho igual */
-    min-width: 250px;                 /* Ancho mínimo para mantenerlas legibles */
-    max-width: 30%;                   /* Limitar el ancho máximo al 30% del contenedor */
-    margin-bottom: 20px;              /* Espacio en la parte inferior para cuando se envuelven */
+    flex: 1;                          
+    min-width: 250px;                 
+    max-width: 30%;                  
+    margin-bottom: 20px;              
 }
 
 /* Imágenes en las tarjetas del Programa de Mentoría */
