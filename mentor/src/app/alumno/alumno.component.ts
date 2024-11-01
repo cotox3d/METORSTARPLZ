@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { EncuestaalumnoService } from '../services/encuestaalumno.service';
 import { Router } from '@angular/router';
-import { EncuestaService } from '../services/encuesta.service';
-import { CommonModule } from '@angular/common'; // Importar CommonModule para usar *ngFor
-import { FormsModule } from '@angular/forms';  // Importar FormsModule
-
 @Component({
-  selector: 'app-encuestamenotr',
+  selector: 'app-alumno',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './encuestamenotr.component.html',
-  styleUrl: './encuestamenotr.component.css'
+  templateUrl: './alumno.component.html',
+  styleUrl: './alumno.component.css'
 })
-export class EncuestamenotrComponent {
-  constructor(private router: Router, private encuestaService: EncuestaService) { }
+export class AlumnoComponent {
+  constructor(private router: Router, private encuestaService: EncuestaalumnoService) { }
 
   // Al enviar el formulario
   onSubmit(formValues: any) {

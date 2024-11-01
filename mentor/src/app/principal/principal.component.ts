@@ -9,17 +9,19 @@ import { Router } from '@angular/router';
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent {
-   constructor(private router: Router) { }  
+  constructor(private router: Router) { }
 
-  goToMentores() {this.router.navigate(['/mentores']);  }
+  goToMentores() { this.router.navigate(['/mentores']); }
 
   info() {
     this.router.navigate(['/info'])
   }
-
-
-
-
+  goToLogin() {
+    this.router.navigate(['/login']);
+  }
+  mentoriado() {
+    this.router.navigate(['/alumno-pri']);
+  }
   scrollToSection(section: string) {
     let targetPosition: number;
     let offset = -65; // Offset predeterminado para las secciones

@@ -1,11 +1,32 @@
 <body>
-  <div class="main">
-    <p class="sign" align="center">Iniciar Sesión</p>
-    <form class="form1" (ngSubmit)="onLogin()">
-      <input class="un" type="text" align="center" placeholder="Usuario" [(ngModel)]="username" name="Codigo" required>
-      <input class="pass" type="password" align="center" placeholder="Contraseña" [(ngModel)]="password" name="password"
-        required>
-      <button class="submit" type="submit" align="center">Sign in</button>
-    </form>
+  <div class="login-container">
+    <!-- Contenedor del formulario de login -->
+    <div class="login-form">
+      <div class="avatar">
+        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="User Icon">
+      </div>
+      <p class="sign">Saludos estudiante 🎓</p>
+      <p class="sub-sign">Inicie sesion con su correo y contraseña</p>
+      <form class="form1" (ngSubmit)="onLogin()">
+        <div class="input-group">
+          <span class="input-icon"><i class="fa fa-envelope"></i></span>
+          <input class="un" type="text" placeholder="E-mail" [(ngModel)]="username" name="Codigo" required>
+        </div>
+        <div class="input-group">
+          <span class="input-icon"><i class="fa fa-lock"></i></span>
+          <input class="pass" type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+        </div>
+        <button class="submit" type="submit">SIGN IN</button>
+      </form>
+    </div>
+
+    <!-- Sección de bienvenida -->
+    <div class="welcome-section">
+      <h2>!Bienvenido al Programa de Mentoría!</h2>
+      <p>Este programa ha sido creado con el objetivo de apoyar a los estudiantes en su adaptación a la vida
+        universitaria y en todos los aspectos relacionados con su desarrollo académico, social y personal. Esperamos que
+        encuentres en él una herramienta valiosa para tu crecimiento. ¡Te damos una cálida bienvenida, estudiante
+        Urepiano!</p>
+    </div>
   </div>
 </body>

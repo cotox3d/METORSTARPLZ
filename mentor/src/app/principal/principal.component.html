@@ -6,7 +6,7 @@
     <header>
         <div class="container">
             <p class="logo">
-                <a (click)="scrollToSection('top')">STAR URP</a>
+                <a (click)="goToLogin()">STAR URP</a>
             </p>
             <nav>
                 <a (click)="scrollToSection('#somos-proya')">Quienes Somos</a>
@@ -34,7 +34,6 @@
                     integrarse plenamente en el entorno académico, social y cultural. Ofrecemos talleres interactivos y
                     asesoría dedicada para asegurar su éxito académico y fomentar su desarrollo personal.
                 </p>
-                
             </div>
         </div>
     </section>
@@ -45,22 +44,27 @@
             <div class="programas">
                 <div class="carta">
                     <h3>MENTOR</h3>
-                    <p></p>
+                    <p>Conviértete en un mentor y ayuda a guiar a otros estudiantes para alcanzar sus metas académicas y
+                        profesionales.</p>
                     <button class="btn btn-primary" (click)="goToMentores()">UNIRTE</button>
                 </div>
                 <div class="carta">
                     <h3>MENTORIADO</h3>
-                    <p></p>
-                    <button>UNIRTE</button>
-                </div>
-                <div class="carta">
-                    <h3>INVITADO</h3>
-                    <p></p>
-                    <button>UNIRTE</button>
+                    <p>Únete como mentoreado y aprende de la experiencia de nuestros mentores para desarrollar tus
+                        habilidades.</p>
+                    <button class="btn btn-primary"(click)="mentoriado()">UNIRTE</button>
                 </div>
             </div>
+            <br>
+            <!-- Agregar enlace para descargar el documento -->
+            <p>Para mayor información acerca de nuestros programas, descarga el documento haciendo click
+                <a href="https://drive.google.com/uc?export=download&id=1B75X0im7wluz_e0rLx2mV0xGqb4RFh7O" download
+                    class="resaltado">aquí</a>
+            </p>
+
         </div>
     </section>
+
 
     <section id="caracteristicas">
         <div class="container">
@@ -91,7 +95,7 @@
             <a href="#fa fa-phone">Contactos</a>
         </p>
     </div>
------
+    -----
     <div class="footer-center">
         <div>
             <i class="fa fa-map-marker"></i>

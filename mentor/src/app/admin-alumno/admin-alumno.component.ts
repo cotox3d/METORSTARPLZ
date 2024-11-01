@@ -1,29 +1,25 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { EncuestaService } from '../services/encuesta.service';
+import { EncuestaalumnoService } from '../services/encuestaalumno.service';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-admini-mentores',
+  selector: 'app-admin-alumno',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './admini-mentores.component.html',
-  styleUrls: ['./admini-mentores.component.css']
+  templateUrl: './admin-alumno.component.html',
+  styleUrl: './admin-alumno.component.css'
 })
-export class AdminiMentoresComponent {
+export class AdminAlumnoComponent {
   encuestas: any[] = [];
   editingEncuesta: any = null;
   newNotifications = 0;
   isDropdownOpen = false;
-  
-  constructor(private router: Router, private encuestaService: EncuestaService) { }
+
+  constructor(private router: Router, private EncuestaalumnoService: EncuestaalumnoService) { }
 
   ngOnInit() {
-    const storedEncuestas = this.encuestaService.getEncuestas();
-    if (storedEncuestas && storedEncuestas.length > 0) {
-      this.encuestas = storedEncuestas;
-    }
+    this.encuestas = this.EncuestaalumnoService.getEncuestas();
   }
 
   // Método para abrir el modal de edición
@@ -40,22 +36,15 @@ export class AdminiMentoresComponent {
   saveEdit() {
     if (this.editingEncuesta && this.editingEncuesta.id != null) {
       // Llama al servicio para actualizar usando el ID de la encuesta
-      this.encuestaService.updateEncuesta(this.editingEncuesta.id, this.editingEncuesta);
-      this.encuestas = [...this.encuestaService.getEncuestas()]; // Recarga la lista completa
+      this.EncuestaalumnoService.updateEncuesta(this.editingEncuesta.id, this.editingEncuesta);
+      this.encuestas = [...this.EncuestaalumnoService.getEncuestas()]; // Recarga la lista completa
     }
     this.closeEditModal(); // Cierra el modal después de guardar
   }
-  onSubmit(formValues: any) {
-    this.encuestaService.addEncuesta(formValues); // Añade la nueva encuesta al servicio
-    this.encuestas = [...this.encuestaService.getEncuestas()]; // Actualiza la lista de encuestas
-  }
+
   // Método para eliminar una encuesta
   deleteEncuesta(index: number) {
-    const encuesta = this.encuestas[index];
-    if (encuesta && encuesta.id != null) {
-      this.encuestaService.deleteEncuesta(encuesta.id); // Llama al método del servicio con el ID
-      this.encuestas = [...this.encuestaService.getEncuestas()]; // Actualiza la lista de encuestas
-    }
+    this.encuestas.splice(index, 1);
   }
 
   toggleDropdown(event: Event) {
@@ -69,5 +58,4 @@ export class AdminiMentoresComponent {
   adminalumno() {
     this.router.navigate(['/adminalumno'])
   }
-  
 }
