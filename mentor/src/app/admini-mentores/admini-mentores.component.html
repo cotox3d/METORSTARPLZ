@@ -9,14 +9,14 @@
 
     <!--Sidebar -->
     <div class="fixed left-0 top-0 w-64 h-full bg-green-700 p-4 z-50 sidebar-menu transition-transform">
-        <a href="#" class="flex items-center pb-4 border-b border-b-gray-800">
+        <a (click)=" login()" class="flex items-center pb-4 border-b border-b-gray-800">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8X4H6nNtyD6X5NThGHvSmydNFJnt2ptwZVQ&s"
                 alt="" class="w-8 h-8 rounded object-cover">
             <span class="text-lg font-bold text-white ml-3">STARD URP</span>
         </a>
         <ul class="mt-4">
             <li class="mb-1 group active">
-                <a href="#"
+                <a (click)=" administrador()"
                     class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-home-2-line mr-3 text-lg"></i>
                     <span class="text-sm">INICIO</span>
@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li class="mb-4">
-                        <a (click)=" adminalumno()"
+                        <a (click)=" alumnioregistro()"
                             class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
                             ALUMNOS
                         </a>
@@ -45,28 +45,22 @@
                 </ul>
             </li>
             <li class="mb-1 group">
-                <a href="#"
-                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                <a [routerLink]="'/adminreu'" routerLinkActive="active selected" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md
+                group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950
+                group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
                     <i class="ri-folder-line mr-3 text-lg"></i>
                     <span class="text-sm">REUNIONES</span>
                 </a>
-                <ul class="pl-7 mt-2 hidden group-[.selected]:block">
-                    <li class="mb-4">
-                        <a href="#"
-                            class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Manage
-                            services</a>
-                    </li>
-                </ul>
             </li>
-            <li class="mb-1 group">
-                <a href="#"
+            <li (click)=" login()" class="mb-1 group">
+                <a (click)=" login()"
                     class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 11-6 0V7a3 3 0 116 0v1" />
                     </svg>
-                    <span class="text-sm">CERRAR SESION</span>
+                    <span  class="text-sm">CERRAR SESION</span>
                 </a>
             </li>
         </ul>

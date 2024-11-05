@@ -8,16 +8,23 @@ import { AdminiMentoresComponent } from './admini-mentores/admini-mentores.compo
 import { InformativoComponent } from './informativo/informativo.component';
 import { AdminAlumnoComponent } from './admin-alumno/admin-alumno.component';
 import { AlumnoComponent } from './alumno/alumno.component';
+import { AdminReunionesComponent } from './admin-reuniones/admin-reuniones.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'administrador', component: AdministradorComponent },
+
+
+  { path: 'info', component: InformativoComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'mentores', component: MentoresComponent },
   { path: 'encuestamentor', component: EncuestamenotrComponent },
+  { path: 'alumno-pri', component: AlumnoComponent },
+
+
+
+  { path: 'administrador', component: AdministradorComponent },
   { path: 'adminmentor', component: AdminiMentoresComponent }, 
-  { path: 'info', component: InformativoComponent },
   { path: 'adminalumno', component: AdminAlumnoComponent },
-  { path: 'alumno-pri', component: AlumnoComponent }
+  { path: 'adminreu', component: AdminReunionesComponent }
 
 ];

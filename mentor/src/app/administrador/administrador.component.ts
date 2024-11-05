@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';  // Importar FormsModule
 import { EncuestaService } from '../services/encuesta.service';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-administrador',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './administrador.component.html',
   styleUrl: './administrador.component.css'
 })
@@ -23,7 +24,18 @@ export class AdministradorComponent  {
   goToadminmentor() {
     this.router.navigate(['/adminmentor']);
   }
-
+  alumnioregistro() {
+    this.router.navigate(['/adminalumno']);
+  }
+  login() {
+    this.router.navigate(['/login']);
+  }
+  administrador() {
+    this.router.navigate(['/administrador'])
+  }
+  reuniones() {
+    this.router.navigate(['/adminreu'])
+  }
   toggleDropdown(event: Event) {
     event.preventDefault();
     this.isDropdownOpen = !this.isDropdownOpen; 

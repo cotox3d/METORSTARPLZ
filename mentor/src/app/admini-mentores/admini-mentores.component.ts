@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EncuestaService } from '../services/encuesta.service';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-admini-mentores',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './admini-mentores.component.html',
   styleUrls: ['./admini-mentores.component.css']
 })
@@ -62,12 +63,20 @@ export class AdminiMentoresComponent {
     event.preventDefault();
     this.isDropdownOpen = !this.isDropdownOpen;
   }
-
   goToadminmentor() {
     this.router.navigate(['/adminmentor']);
   }
-  adminalumno() {
-    this.router.navigate(['/adminalumno'])
+  alumnioregistro() {
+    this.router.navigate(['/adminalumno']);
   }
-  
+  login() {
+    this.router.navigate(['/login']);
+  }
+  administrador() {
+    this.router.navigate(['/administrador'])
+  }
+  reuniones() {
+    this.router.navigate(['/adminreu'])
+  }
+
 }
