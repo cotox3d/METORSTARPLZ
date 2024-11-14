@@ -1,9 +1,2 @@
-npm install -g @angular/cli
+PROYECTO DE MENTORIOA STRAD PLUS
 
-npm install -D tailwindcss
-
-npm install ionicons
-
-npm install @fortawesome/fontawesome-free
-
-npm install express
