@@ -135,18 +135,27 @@
         <div class="bg-white p-6 rounded-lg shadow-lg w-1/2">
             <h3 class="text-xl font-bold mb-4">Editar Encuesta</h3>
             <form (ngSubmit)="saveEdit()">
-                <label class="block mb-2">Función</label>
-                <input [(ngModel)]="editingEncuesta.funcion" name="funcion" class="w-full p-2 border rounded-md mb-4" />
-
-                <label class="block mb-2">Personaje</label>
-                <input [(ngModel)]="editingEncuesta.personaje" name="personaje"
-                    class="w-full p-2 border rounded-md mb-4" />
-
+                <label class="block mb-2">Codigo</label>
+                <input [(ngModel)]="editingEncuesta.codigo" name="codigo" class="w-full p-2 border rounded-md mb-4" />
+                
                 <label class="block mb-2">Nombre</label>
                 <input [(ngModel)]="editingEncuesta.nombre" name="nombre" class="w-full p-2 border rounded-md mb-4" />
 
-                <label class="block mb-2">Carrera</label>
-                <input [(ngModel)]="editingEncuesta.carrera" name="carrera" class="w-full p-2 border rounded-md mb-4" />
+                <label class="block mb-2">Apellido</label>
+                <input [(ngModel)]="editingEncuesta.apellido" name="apellido"
+                    class="w-full p-2 border rounded-md mb-4" />
+
+                <!-- <label class="block mb-2">Carrera</label>
+                <input [(ngModel)]="editingEncuesta.carrera" name="carrera" class="w-full p-2 border rounded-md mb-4" value="Ingeniería" /> -->
+
+                <label class="block mb-2">Especialidad</label>
+                <select [(ngModel)]="editingEncuesta.especialidad" name="especialidad" class="w-full p-2 border rounded-md mb-4">
+                    <option value="Informatica">Informática</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Industrial">Industrial</option>
+                    <option value="Mecatronica">Mecatrónica</option>
+                    <option value="Electronica">Electrónica</option>
+                </select>
 
                 <label class="block mb-2">Ciclo</label>
                 <input [(ngModel)]="editingEncuesta.ciclo" name="ciclo" type="number"
