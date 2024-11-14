@@ -14,6 +14,7 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
   errorMessage: string | null = null;
+  isLoading: boolean = false; // Indicador de carga
 
 // Definimos un conjunto de arreglos
 users = [
@@ -26,11 +27,16 @@ users = [
   constructor(private router: Router) {}
 
   onLogin() {
+    // Limpiar mensajes previos y comenzar a cargar
+    this.errorMessage = null;
+    this.isLoading = true;
+
+    setTimeout(() => {
     const foundUser = this.users.find(user => user.username === this.username && user.password === this.password);
 
     if (foundUser) {
       this.errorMessage = null;
-      alert('Login exitoso');
+      this.isLoading = false;
 
       // Redirigir según el rol del usuario
       if (foundUser.role === 'mentor') {
@@ -40,8 +46,9 @@ users = [
       }
     } else {
       // En caso de credenciales incorrectas
-      alert('Usuario o contraseña incorrectos');
+      this.isLoading = false;
       this.errorMessage = 'Usuario o contraseña incorrectos';
-    }
+       }   
+    }, 1500);
   }
 }
