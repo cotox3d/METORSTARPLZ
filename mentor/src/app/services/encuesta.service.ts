@@ -3,7 +3,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class EncuestaService {
+export class EncuestaMentorService {
   private encuestas: any[] = [];
   newEncuestaAdded = new EventEmitter<void>();
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { EncuestaService } from '../services/encuesta.service';
+import { EncuestaMentorService } from '../services/encuesta.service';
 import { CommonModule } from '@angular/common'; // Importar CommonModule para usar *ngFor
 import { FormsModule } from '@angular/forms';  // Importar FormsModule
 
@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';  // Importar FormsModule
   styleUrl: './encuestamenotr.component.css'
 })
 export class EncuestamenotrComponent {
-  constructor(private router: Router, private encuestaService: EncuestaService) { }
+  constructor(private router: Router, private encuestaService: EncuestaMentorService) { }
 
   // Al enviar el formulario
   onSubmit(formValues: any) {

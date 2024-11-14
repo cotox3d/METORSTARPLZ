@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { EncuestaService } from '../services/encuesta.service';
+import { EncuestaMentorService } from '../services/encuesta.service';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 
@@ -18,7 +18,7 @@ export class AdminiMentoresComponent {
   newNotifications = 0;
   isDropdownOpen = false;
   
-  constructor(private router: Router, private encuestaService: EncuestaService) { }
+  constructor(private router: Router, private encuestaService: EncuestaMentorService) { }
 
   ngOnInit() {
     const storedEncuestas = this.encuestaService.getEncuestas();

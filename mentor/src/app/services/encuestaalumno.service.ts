@@ -3,8 +3,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class EncuestaalumnoService {
-
+export class EncuestaAlumnoService {
   private encuestas: any[] = [];
   newEncuestaAdded = new EventEmitter<void>();
 
@@ -43,4 +42,3 @@ export class EncuestaalumnoService {
     return Date.now() + Math.floor(Math.random() * 1000);
   }
 }
-

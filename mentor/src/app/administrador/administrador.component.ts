@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';  // Importar FormsModule
-import { EncuestaService } from '../services/encuesta.service';
+import { EncuestaMentorService } from '../services/encuesta.service';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 
@@ -20,7 +20,7 @@ export class AdministradorComponent  {
   totalAlumnos: number = 100;
   totalProfesores: number = 8;
 
-  constructor(private router: Router, private encuestaService: EncuestaService) { }
+  constructor(private router: Router, private encuestaService: EncuestaMentorService) { }
   goToadminmentor() {
     this.router.navigate(['/adminmentor']);
   }

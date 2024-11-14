@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { EncuestaalumnoService } from '../services/encuestaalumno.service';
+import { EncuestaAlumnoService } from '../services/encuestaalumno.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-alumno',
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './alumno.component.css'
 })
 export class AlumnoComponent {
-  constructor(private router: Router, private encuestaService: EncuestaalumnoService) { }
+  constructor(private router: Router, private encuestaService: EncuestaAlumnoService) { }
 
   // Al enviar el formulario
   onSubmit(formValues: any) {

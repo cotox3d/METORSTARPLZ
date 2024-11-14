@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { EncuestaService } from '../services/encuesta.service';
+import { EncuestaMentorService } from '../services/encuesta.service';
 import { CommonModule } from '@angular/common';
 interface Mentor {
   name: string;
@@ -15,9 +15,9 @@ interface Mentor {
   styleUrl: './mentores.component.css'
 })
 export class MentoresComponent {
-  constructor(private router: Router, private encuestaService: EncuestaService) { }
+  constructor(private router: Router, private encuestaService: EncuestaMentorService) { }
 
-  encuestas: any[] = [];
+  encuestas: any[] = [];  
 
   ngOnInit() {
     // Obtener los datos de las encuestas del servicio

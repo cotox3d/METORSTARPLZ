@@ -2,6 +2,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <title>Dashboard</title>
 </head>
 
@@ -68,3 +70,67 @@
     <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
     <!-- end -->
 </body>
+<main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 min-h-screen transition-all main">
+    <div class="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+        <button type="button" class="text-lg text-gray-600 sidebar-toggle">
+            <i class="ri-menu-line"></i>
+        </button>
+        <ul class="flex items-center text-sm ml-4">
+            <li class="mr-2">
+                <a href="#" class="text-gray-400 hover:text-gray-600 font-medium">REUNIONES</a>
+            </li>
+
+        </ul>
+
+        <div class="ml-auto relative">
+            <button class="text-lg text-gray-600 hover:text-gray-800 focus:outline-none relative">
+                <i class="ri-notification-3-line"></i>
+                <span  
+                    class="absolute -top-1 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
+                </span>
+            </button>
+        </div>
+    </div>
+<div class="container mx-auto p-8">
+    <h2 class="text-2xl font-bold text-green-600 text-center mb-6">Reuniones Registradas</h2>
+        <!-- Botón para agregar reunión -->
+        <div class="flex justify-end mb-4">
+            <button 
+                class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md flex items-center">
+                <i class="ri-add-line mr-2"></i> Agregar Reunión
+            </button>
+        </div>
+        
+        <!-- Tabla de reuniones -->
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="py-2 px-4 border border-gray-300 text-left text-gray-600 font-medium">Mentor</th>
+                        <th class="py-2 px-4 border border-gray-300 text-left text-gray-600 font-medium">Alumno</th>
+                        <th class="py-2 px-4 border border-gray-300 text-left text-gray-600 font-medium">Día</th>
+                        <th class="py-2 px-4 border border-gray-300 text-left text-gray-600 font-medium">Hora</th>
+                        <th class="py-2 px-4 border border-gray-300 text-left text-gray-600 font-medium">Aula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de ejemplo -->
+                    <tr class="hover:bg-gray-100">
+                        <td class="py-2 px-4 border border-gray-300">Mentor 1</td>
+                        <td class="py-2 px-4 border border-gray-300">Alumno 1</td>
+                        <td class="py-2 px-4 border border-gray-300">Lunes</td>
+                        <td class="py-2 px-4 border border-gray-300">10:00 AM</td>
+                        <td class="py-2 px-4 border border-gray-300">Aula 101</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="py-2 px-4 border border-gray-300">Mentor 2</td>
+                        <td class="py-2 px-4 border border-gray-300">Alumno 2</td>
+                        <td class="py-2 px-4 border border-gray-300">Martes</td>
+                        <td class="py-2 px-4 border border-gray-300">11:00 AM</td>
+                        <td class="py-2 px-4 border border-gray-300">Aula 202</td>
+                    </tr>
+                    <!-- Agrega más filas aquí si es necesario -->
+                </tbody>
+            </table>
+        </div>
+    </div>

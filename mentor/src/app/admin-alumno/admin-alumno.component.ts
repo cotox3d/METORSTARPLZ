@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { EncuestaalumnoService } from '../services/encuestaalumno.service';
+import { EncuestaAlumnoService } from '../services/encuestaalumno.service';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 
@@ -18,7 +18,7 @@ export class AdminAlumnoComponent {
   newNotifications = 0;
   isDropdownOpen = false;
 
-  constructor(private router: Router, private EncuestaalumnoService: EncuestaalumnoService) { }
+  constructor(private router: Router, private EncuestaalumnoService: EncuestaAlumnoService) { }
 
   ngOnInit() {
     this.encuestas = this.EncuestaalumnoService.getEncuestas();
