@@ -23,20 +23,22 @@
         <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
             <thead>
                 <tr class="bg-green-500 text-white text-left uppercase text-sm leading-normal">
-                    <th class="py-3 px-6 font-semibold">Función</th>
-                    <th class="py-3 px-6 font-semibold">Personaje</th>
+                    <th class="py-3 px-6 font-semibold">Codigo</th>
                     <th class="py-3 px-6 font-semibold">Nombre</th>
+                    <th class="py-3 px-6 font-semibold">Apellido</th>
                     <th class="py-3 px-6 font-semibold">Carrera</th>
+                    <th class="py-3 px-6 font-semibold">Especialidad</th>
                     <th class="py-3 px-6 font-semibold">Ciclo</th>
                     <th class="py-3 px-6 font-semibold">Cumpleaños</th>
                 </tr>
             </thead>
             <tbody class="text-gray-700 text-sm">
                 <tr *ngFor="let encuesta of encuestas" class="border-b hover:bg-gray-100">
-                    <td class="py-3 px-6 border border-gray-200">{{ encuesta.funcion }}</td>
-                    <td class="py-3 px-6 border border-gray-200">{{ encuesta.personaje }}</td>
+                    <td class="py-3 px-6 border border-gray-200">{{ encuesta.codigo }}</td>
                     <td class="py-3 px-6 border border-gray-200">{{ encuesta.nombre }}</td>
-                    <td class="py-3 px-6 border border-gray-200">{{ encuesta.carrera }}</td>
+                    <td class="py-3 px-6 border border-gray-200">{{ encuesta.apellido }}</td>
+                    <td class="py-3 px-6 border border-gray-200">Ingeniería</td>
+                    <td class="py-3 px-6 border border-gray-200">{{ encuesta.especialidad }}</td>
                     <td class="py-3 px-6 border border-gray-200">{{ encuesta.ciclo }}</td>
                     <td class="py-3 px-6 border border-gray-200">{{ encuesta.cumpleanos }}</td>
                 </tr>
