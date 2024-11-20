@@ -22,20 +22,11 @@
         <h2 class="text-2xl font-bold text-green-600 text-center mb-6">Ingresa tu perfil de suerte</h2>
 
         <form id="encuestaForm" #encuestaForm="ngForm" (ngSubmit)="onSubmit(encuestaForm.value)" class="space-y-4">
-            <!-- Función -->
-            <div>
-                <label for="funcion" class="block text-green-700 font-semibold">Función</label>
-                <select id="funcion" name="funcion" ngModel
-                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
-                    required>
-                    <option value="mentoriado" selected>Mentoriado</option>
-                </select>
-            </div>
 
-            <!-- Personaje -->
+            <!-- Codigo -->
             <div>
-                <label for="personaje" class="block text-green-700 font-semibold">Personaje</label>
-                <input type="text" id="personaje" name="personaje" ngModel
+                <label for="personaje" class="block text-green-700 font-semibold">Codigo</label>
+                <input type="text" id="codigo" name="codigo" ngModel
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                     required>
             </div>
@@ -48,20 +39,33 @@
                     required>
             </div>
 
+            <!-- Apellido -->
+            <div>
+                <label for="personaje" class="block text-green-700 font-semibold">Apellido</label>
+                <input type="text" id="apellido" name="apellido" ngModel
+                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
+                    required>
+            </div>
+
             <!-- Carrera -->
             <div>
                 <label for="carrera" class="block text-green-700 font-semibold">Carrera</label>
-                <select id="carrera" name="carrera" ngModel
+                <input type="text" id="carrera" name="carrera" value="Ingeniería" readonly
+                    class="w-full px-4 py-2 border rounded-md bg-gray-100 text-gray-700 focus:outline-none">
+            </div>
+
+            <!-- Especialidad -->
+            <div>
+                <label for="especialidad" class="block text-green-700 font-semibold">Especialidad</label>
+                <select id="especialidad" name="especialidad" ngModel
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                     required>
-                    <option value="" disabled selected>Selecciona una carrera</option>
-                    <option value="ingenieria">Ingeniería</option>
-                    <option value="medicina">Medicina</option>
-                    <option value="arquitectura">Arquitectura</option>
-                    <option value="derecho">Derecho</option>
-                    <option value="administracion">Administración</option>
-                    <option value="ciencias">Ciencias</option>
-                    <option value="economia">Economía</option>
+                    <option value="" disabled selected>Selecciona su especialidad</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Electronica">Electronica</option>
+                    <option value="Informatica">Informatica</option>
+                    <option value="Industrial">Industrial</option>
+                    <option value="Mecatronica">Mecatronica</option>
                 </select>
             </div>
 

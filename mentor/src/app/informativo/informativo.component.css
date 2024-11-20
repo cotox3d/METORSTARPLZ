@@ -283,13 +283,27 @@ header a:hover {
     background-color: #e6f4e6;
     padding: 40px 20px;
 }
+.border-2 {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.bg-green-light {
+    background-color: #e6f4e6;
+    padding: 40px 20px;
+}
 
 /* Map container styles */
 .map-container {
     position: relative;
-    width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     margin: auto;
+    text-align: center;
 }
 
 .map-image {
@@ -298,30 +312,28 @@ header a:hover {
     display: block;
 }
 
+/* Área clicable y Tooltip */
 .clickable-area {
     position: absolute;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: rgba(0, 83, 32, 0.8);
-    /* Ajusta el color y la opacidad */
     cursor: pointer;
 }
 
 .faculty-tooltip {
     position: absolute;
-    background-color: #fff;
+    background-color: #333;
+    color: #fff;
     padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    color: #333;
+    border-radius: 4px;
     white-space: nowrap;
-    transform: translate(-50%, -100%);
-    pointer-events: none;
+    transform: translate(-50%, -120%);
+    /* Ajusta para centrar en X y aparecer arriba */
+    z-index: 10;
+    font-size: 0.9em;
 }
-
 /* Footer Styles */
 .footer-distributed {
     background-color: #1a492c;

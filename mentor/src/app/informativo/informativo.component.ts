@@ -16,8 +16,8 @@ export class InformativoComponent {
 
   showFacultyName(name: string, event: MouseEvent): void {
     this.facultyName = name;
-    this.tooltipX = event.clientX-200; // Posición X del tooltip
-    this.tooltipY = event.clientY - 300; // Posición Y del tooltip (ajustada para que aparezca arriba)
+    this.tooltipX = event.clientX; // Posición X del tooltip
+    this.tooltipY = event.clientY; // Posición Y del tooltip (ajustada para que aparezca arriba)
   }
 
   hideFacultyName(): void {

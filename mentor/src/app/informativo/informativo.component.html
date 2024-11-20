@@ -55,20 +55,22 @@
     </section>
 
     <!-- Sección del Mapa -->
+    <div class="border-2 border-gray-300 rounded-lg bg-white shadow-lg p-4">
     <section id="mapa" class="bg-green-light text-center py-8">
         <h3 class="text-2xl font-bold text-green-900 underline mb-4">MAPA DE LA UNIVERSIDAD RICARDO PALMA</h3>
         <div class="map-container">
             <img src="https://static.wixstatic.com/media/5d8aa1_08ea3d86566b4b2696df90796dae3ad2~mv2.png/v1/crop/x_680,y_210,w_4660,h_2490/fill/w_560,h_300,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/mapa%20croqui.png"
                 alt="Mapa 3D de la Universidad Ricardo Palma" class="map-image w-full h-auto">
 
-            <div class="clickable-area" style="top: 120px; left: 150px;"
-                (mouseover)="showFacultyName('Facultad A', $event)" (mouseleave)="hideFacultyName()"></div>
+            <div class="clickable-area" 
+                (mouseover)="showFacultyName('Facultad PEB', $event)" (mouseleave)="hideFacultyName()"></div>
 
             <div *ngIf="facultyName" class="faculty-tooltip" [style.top.px]="tooltipY" [style.left.px]="tooltipX">
                 {{ facultyName }}
             </div>
         </div>
     </section>
+    </div>
 
     <footer class="footer-distributed">
         <div class="footer-left">

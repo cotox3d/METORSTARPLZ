@@ -32,25 +32,6 @@ body {
   justify-content: center;
 }
 
-/* Imagen de usuario en la parte superior */
-.avatar {
-  background: #006400;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.avatar img {
-  width: 50%;
-  height: 50%;
-  filter: invert(1);
-  /* Esta línea hace que el icono sea blanco */
-}
-
 /* Título principal del formulario */
 .sign {
   color: #006400;
@@ -67,6 +48,14 @@ body {
   margin-bottom: 30px;
 }
 
+.error-message {
+  color: red;
+  /* Cambiar a rojo */
+  text-align: center;
+  /* Centrar el texto */
+}
+
+
 /* Grupo de entrada con íconos */
 .input-group {
   position: relative;
@@ -81,6 +70,17 @@ body {
   transform: translateY(-50%);
   color: #006400;
   font-size: 18px;
+}
+
+.welcome-image {
+  max-width: 50%;
+  height: auto;
+  margin-top: 20px;
+  /* Añadir un espacio entre el texto y la imagen */
+  border-radius: 20px;
+  /* Añadir bordes redondeados a la imagen si lo deseas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* Añadir sombra a la imagen */
 }
 
 .un,
@@ -156,4 +156,30 @@ body {
   text-align: center;
   line-height: 1.5;
   max-width: 300px;
+}
+
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #00ee40;
+  /* Puedes cambiar el color del spinner aquí */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(860deg);
+  }
 }
