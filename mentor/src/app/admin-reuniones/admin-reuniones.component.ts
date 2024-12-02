@@ -75,4 +75,12 @@ export class AdminReunionesComponent {
       alert('No puedes seleccionar un día pasado.');
     }
   }
+
+  deleteReunion(index: number) {
+    // Eliminar reunión de la lista
+    this.reuniones.splice(index, 1);
+
+    // Actualizar localStorage
+    localStorage.setItem('reuniones', JSON.stringify(this.reuniones));
+  }
 }
