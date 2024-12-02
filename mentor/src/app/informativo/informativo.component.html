@@ -53,6 +53,13 @@
 
         </div>
     </section>
+<br class="flex justify-center items-center h-screen">
+  <!-- Agregar enlace para descargar el documento -->
+  <p class="text-center">
+    Para mayor información acerca de nuestros programas, descarga el documento haciendo click
+    <a href="https://docs.google.com/uc?export=download&id=1HKEDFhbT3liobirlh5W5JkfqR560RHHn" download
+      class="text-blue-500 underline hover:text-blue-700">aquí</a>.
+  </p>
 
     <!-- Sección del Mapa -->
     <div class="border-2 border-gray-300 rounded-lg bg-white shadow-lg p-4">
@@ -62,7 +69,7 @@
             <img src="https://static.wixstatic.com/media/5d8aa1_08ea3d86566b4b2696df90796dae3ad2~mv2.png/v1/crop/x_680,y_210,w_4660,h_2490/fill/w_560,h_300,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/mapa%20croqui.png"
                 alt="Mapa 3D de la Universidad Ricardo Palma" class="map-image w-full h-auto">
 
-            <div class="clickable-area" 
+            <div class="clickable-area"
                 (mouseover)="showFacultyName('Facultad PEB', $event)" (mouseleave)="hideFacultyName()"></div>
 
             <div *ngIf="facultyName" class="faculty-tooltip" [style.top.px]="tooltipY" [style.left.px]="tooltipX">
