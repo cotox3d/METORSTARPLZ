@@ -9,6 +9,7 @@ import { InformativoComponent } from './informativo/informativo.component';
 import { AdminAlumnoComponent } from './admin-alumno/admin-alumno.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { AdminReunionesComponent } from './admin-reuniones/admin-reuniones.component';
+import { RunionesPrincipalComponent } from './runiones-principal/runiones-principal.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -19,11 +20,13 @@ export const routes: Routes = [
   { path: 'mentores', component: MentoresComponent },
   { path: 'encuestamentor', component: EncuestamenotrComponent },
   { path: 'alumno-pri', component: AlumnoComponent },
+  { path: 'reuprincipal', component: RunionesPrincipalComponent },
+
 
 
 
   { path: 'administrador', component: AdministradorComponent },
-  { path: 'adminmentor', component: AdminiMentoresComponent }, 
+  { path: 'adminmentor', component: AdminiMentoresComponent },
   { path: 'adminalumno', component: AdminAlumnoComponent },
   { path: 'adminreu', component: AdminReunionesComponent }
 

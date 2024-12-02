@@ -22,6 +22,9 @@ export class PrincipalComponent {
   mentoriado() {
     this.router.navigate(['/alumno-pri']);
   }
+  reuprincial() {
+    this.router.navigate(['/reuprincipal']);
+  }
   scrollToSection(section: string) {
     let targetPosition: number;
     let offset = -65; // Offset predeterminado para las secciones
